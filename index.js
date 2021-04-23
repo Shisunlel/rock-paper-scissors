@@ -8,13 +8,13 @@ const computerPlay = () =>
   //random selection array from 0 to 2 array size
   selection[Math.floor(Math.random() * selection.length)];
 
-const winMessage = (playerSelection, computerSelection) =>
+const showWinMessage = (playerSelection, computerSelection) =>
   console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
 
-const loseMessage = (playerSelection, computerSelection) =>
+const showLoseMessage = (playerSelection, computerSelection) =>
   console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
 
-const score = (playerScore, computerScore) =>
+const showCurrentScore = (playerScore, computerScore) =>
   console.log(`${playerScore} : ${computerScore}`);
 
 function playRound(playerSelection, computerSelection) {
@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection) {
   //if both selection is the same
   if (playerSelection === computerSelection) {
     console.log("Draw");
-    return score(playerScore, computerScore);
+    return showCurrentScore(playerScore, computerScore);
   }
 
   //rock beats scissors beats paper beats rock
@@ -38,13 +38,13 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Scissors" && computerSelection === "Paper") ||
     (playerSelection === "Paper" && computerSelection === "Rock")
   ) {
-    winMessage(playerSelection, computerSelection);
+    showWinMessage(playerSelection, computerSelection);
     playerScore++;
-    score(playerScore, computerScore);
+    showCurrentScore(playerScore, computerScore);
   } else {
-    loseMessage(playerSelection, computerSelection);
+    showLoseMessage(playerSelection, computerSelection);
     computerScore++;
-    score(playerScore, computerScore);
+    showCurrentScore(playerScore, computerScore);
   }
 }
 
