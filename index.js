@@ -18,13 +18,8 @@ const showCurrentScore = (playerScore, computerScore) =>
   console.log(`${playerScore} : ${computerScore}`);
 
 function playRound(playerSelection, computerSelection) {
-  //convert both string to first cap
-  //divide first character and after to two different then connect
-  playerSelectionCap = playerSelection[0].toUpperCase();
-  playerSelectionLow = playerSelection.substr(1).toLowerCase();
-
-  //connect them back
-  playerSelection = playerSelectionCap + playerSelectionLow;
+  //change first letter to cap and the rest to lowercase
+  playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
 
   //if both selection is the same
   if (playerSelection === computerSelection) {
