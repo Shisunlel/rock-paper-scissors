@@ -103,9 +103,7 @@ function reset() {
   playerSelection = "";
   resultContainer.textContent = "";
   notification.textContent = "";
-  document
-    .querySelector(".button-holder")
-    .removeChild(document.querySelector("#reset"));
+  document.querySelector("#reset").remove();
   rockBtn.disabled = false;
   scissorsBtn.disabled = false;
   paperBtn.disabled = false;
