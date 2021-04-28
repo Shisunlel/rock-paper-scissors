@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-#author{
+#author {
   position: absolute;
   top: 0;
   left: 1em;
@@ -56,7 +56,7 @@ button:hover,
 button:focus-visible {
   filter: brightness(120%);
   outline: 0;
-  animation: button-hover .5s ease-in 0s infinite alternate none;
+  animation: button-hover 0.5s ease-in 0s infinite alternate none;
 }
 
 @keyframes button-hover {
@@ -79,7 +79,13 @@ img {
 #notification {
   font-size: 1.1rem;
   text-align: center;
-  animation: sweep 1s ease-in 1s infinite alternate none;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: ;) {
+  #result,
+  #notification {
+    animation: sweep 1s ease-in 1s infinite alternate none;
+  }
 }
 
 @keyframes sweep {
@@ -87,7 +93,7 @@ img {
     background: var(--background);
   }
   to {
-    background: rgb(131,58,180);
+    background: rgb(131, 58, 180);
     background: linear-gradient(
       90deg,
       rgba(131, 58, 180, 1) 0%,
@@ -115,18 +121,17 @@ img {
 }
 
 @media only screen and (max-height: 650px) {
-  #result{
+  #result {
     margin-top: 2em;
   }
 }
 
 @media only screen and (min-width: 768px) {
-
-  .button-holder{
+  .button-holder {
     flex-direction: row;
   }
 
-  img{
+  img {
     object-fit: scale-down;
     max-width: 150px;
     height: 150px;
@@ -134,11 +139,10 @@ img {
 }
 
 @media only screen and (min-width: 1155px) {
-
-  :root{
+  :root {
     font-size: 2rem;
   }
-  img{
+  img {
     max-width: 250px;
     height: 250px;
   }
