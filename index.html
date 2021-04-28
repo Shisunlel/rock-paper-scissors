@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/main.css" />
     <title>Rock Paper Scissors</title>
-</head>
-<body>
-    
-<script src="index.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="result"></div>
+    <div class="button-holder">
+      <button id="rock">
+          <img src="/img/rock.png" alt="">
+      </button>
+      <button id="paper">
+          <img src="/img/paper.png" alt="">
+      </button>
+      <button id="scissors">
+          <img src="/img/scissors.png" alt="">
+      </button>
+    </div>
+    <div id="notification"></div>
+    <audio>
+        <source src="/sound/confetti.mp3" type="audio/mpeg">
+        Your browser is not supported.
+    </audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

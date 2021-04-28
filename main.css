@@ -1,0 +1,103 @@
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: "Roboto Slap", "serif";
+  --background: #e1e1f0;
+  --text: #2f2f1f;
+  --silver: #c0c0c0;
+  --palenight: #292d3e;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.button-holder {
+  margin: 1em;
+}
+
+button {
+  margin: 1em;
+  color: var(--text);
+  background: var(--silver);
+  border-radius: 2em;
+  border: 0;
+  box-shadow: 0 0 0 0.2ch var(--text);
+  font-size: 1.3rem;
+  padding: 0.5em 1.2em;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:focus-visible,
+button:disabled:focus {
+  filter: brightness(20%);
+}
+
+button:focus,
+button:hover,
+button:focus-visible {
+  filter: brightness(120%);
+  outline: 0;
+  animation: button-hover .5s ease-in 0s infinite alternate none;
+}
+
+@keyframes button-hover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+img {
+  max-width: 250px;
+  object-fit: contain;
+  width: 100%;
+  height: 250px;
+}
+
+#result,
+#notification {
+  font-size: 1.1rem;
+  animation: sweep 1s ease-in 1s infinite alternate none;
+}
+
+@keyframes sweep {
+  from {
+    background: var(--background);
+  }
+  to {
+    background: linear-gradient(
+      90deg,
+      rgba(131, 58, 180, 1) 0%,
+      rgba(253, 29, 29, 1) 50%,
+      rgba(252, 176, 69, 1) 100%
+    );
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+/* #result current score */
+/* #notification result message */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #2e2e1f;
+    --text: #e0e0f0;
+  }
+
+  button {
+    background: var(--palenight);
+  }
+}
