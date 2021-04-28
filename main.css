@@ -81,7 +81,7 @@ img {
   text-align: center;
 }
 
-@supports (background-clip: text) or (-webkit-background-clip: ;) {
+@supports (background-clip: text) or (-webkit-background-clip: text) {
   #result,
   #notification {
     animation: sweep 1s ease-in 1s infinite alternate none;
