@@ -96,6 +96,7 @@ img {
     );
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
   }
 }
 
@@ -110,6 +111,12 @@ img {
 
   button {
     background: var(--palenight);
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  #result{
+    margin-top: 2em;
   }
 }
 
