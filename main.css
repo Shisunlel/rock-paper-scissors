@@ -71,6 +71,7 @@ img {
 #result,
 #notification {
   font-size: 1.1rem;
+  text-align: center;
   animation: sweep 1s ease-in 1s infinite alternate none;
 }
 
@@ -106,9 +107,6 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-  :root{
-    font-size: 2rem;
-  }
 
   .button-holder{
     flex-direction: row;
@@ -122,6 +120,10 @@ img {
 }
 
 @media only screen and (min-width: 1155px) {
+
+  :root{
+    font-size: 2rem;
+  }
   img{
     max-width: 250px;
     height: 250px;
