@@ -20,6 +20,13 @@ body {
   min-height: 100vh;
 }
 
+#author{
+  position: absolute;
+  top: 0;
+  left: 1em;
+  color: var(--text);
+}
+
 .button-holder {
   margin: 1em;
   display: flex;
